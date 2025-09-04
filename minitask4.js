@@ -35,9 +35,13 @@ const out = (celcius, convertFarenheit, convertKelvin, convertReamur) => {
   //   const result = cb1 + cb2 + cb3;
   //   console.log(result);
   return console.log(
-    convertFarenheit(30) + "\n" + convertReamur(30) + "\n" + convertKelvin(30)
+    convertFarenheit(celcius) +
+      "\n" +
+      convertReamur(celcius) +
+      "\n" +
+      convertKelvin(celcius)
   );
 };
 
 console.log("\n");
-out(30, convertFarenheit, convertReamur, convertKelvin);
+out(50, convertFarenheit, convertReamur, convertKelvin);
