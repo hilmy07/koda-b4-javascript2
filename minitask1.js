@@ -13,14 +13,17 @@ const extraInfo = {
   ],
 };
 
-const extraSkills1 = [(extraInfo.skills[2] = "gaming")];
-const extraSkills2 = [(extraInfo.skills[3] = "singing")];
+const extraSkills1 = (extraInfo.skills = [
+  "olahraga",
+  "painting",
+  "programming",
+  "design",
+]);
 
 const profile = {
   ...bio,
   ...extraInfo,
   ...extraSkills1,
-  ...extraSkills2,
 };
 
 // const profileku = {
