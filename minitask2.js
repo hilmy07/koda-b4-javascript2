@@ -21,5 +21,7 @@ const profile = {
 let { skills } = profile;
 console.log(skills[1]);
 
-let { name } = profile.education[0];
+let {
+  education: [{ name }],
+} = profile;
 console.log(name);
