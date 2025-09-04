@@ -13,17 +13,19 @@ const extraInfo = {
   ],
 };
 
-const extraSkills1 = (extraInfo.skills = [
-  "olahraga",
-  "painting",
-  "programming",
-  "design",
-]);
+// const extraSkills1 = (extraInfo.skills = [
+//   "olahraga",
+//   "painting",
+//   "programming",
+//   "design",
+// ]);
 
 const profile = {
   ...bio,
   ...extraInfo,
-  ...extraSkills1,
+  ...{
+    skills: [...extraInfo.skills, "gaming", "singing"],
+  },
 };
 
 // const profileku = {
@@ -32,8 +34,8 @@ const profile = {
 //   ...extraSkills2,
 // };
 
-console.log(profile);
-console.log("\n");
+console.log(profile.skills);
+// console.log("\n");
 console.log(profile.skills[1]);
 console.log("\n");
 // console.log(profileku);
