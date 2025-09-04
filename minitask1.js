@@ -18,6 +18,17 @@ const profile = {
   ...extraInfo,
 };
 
+const extraSkills1 = [(extraInfo.skills[2] = "gaming")];
+const extraSkills2 = [(extraInfo.skills[3] = "singing")];
+
+const profileku = {
+  ...extraInfo.skills,
+  ...extraSkills1,
+  ...extraSkills2,
+};
+
 console.log(profile);
 console.log("\n");
 console.log(profile.skills[1]);
+console.log("\n");
+console.log(profileku);
