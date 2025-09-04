@@ -4,20 +4,25 @@
 // 4. output dalam format benar
 
 function convertFarenheit(celcius) {
-  return (celcius * 9) / 5 + 32;
+  return "Farenheit: " + (celcius * 9) / 5 + 32;
 }
 
 const reamur = function convertReamur(celcius) {
-  return (celcius * 4) / 5;
+  return "Reamur: " + (celcius * 4) / 5;
 };
 
 const kelvin = (celcius) => {
-  return celcius + 273.15;
+  return "Kelvin: " + (celcius + 273.15);
 };
 
 const convert = (celcius) => {
-  return `Farenheit: ${convertFarenheit(celcius)}°F\nReamur: ${reamur(
-    celcius
-  )}°R\nKelvin: ${kelvin(celcius)} K`;
+  return (
+    convertFarenheit(celcius) +
+    "°F\n" +
+    reamur(celcius) +
+    "°R\n" +
+    kelvin(celcius) +
+    " K"
+  );
 };
 console.log(convert(25));
