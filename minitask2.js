@@ -18,8 +18,8 @@ const profile = {
   ...extraInfo,
 };
 
-let { skills } = extraInfo;
+let { skills } = profile;
 console.log(skills[1]);
 
-let { name } = extraInfo.education[0];
-console.log(name);
+let { education } = profile;
+console.log(education[0]);
