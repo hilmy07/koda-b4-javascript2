@@ -7,11 +7,11 @@ function convertFarenheit(celcius) {
   return "Farenheit: " + (celcius * 9) / 5 + 32;
 }
 
-const reamur = function convertReamur(celcius) {
+const convertReamur = function convertReamur(celcius) {
   return "Reamur: " + (celcius * 4) / 5;
 };
 
-const kelvin = (celcius) => {
+const convertKelvin = (celcius) => {
   return "Kelvin: " + (celcius + 273.15);
 };
 
@@ -19,10 +19,20 @@ const convert = (celcius) => {
   return (
     convertFarenheit(celcius) +
     "°F\n" +
-    reamur(celcius) +
+    convertReamur(celcius) +
     "°R\n" +
-    kelvin(celcius) +
+    convertKelvin(celcius) +
     " K"
   );
 };
+
 console.log(convert(25));
+
+const out = (celcius, cb) => {
+  const result = cb(celcius);
+  console.log(result);
+};
+console.log("\n");
+out(30, convertFarenheit);
+out(30, convertReamur);
+out(30, convertKelvin);
