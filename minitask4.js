@@ -28,11 +28,16 @@ const convert = (celcius) => {
 
 console.log(convert(25));
 
-const out = (celcius, cb) => {
-  const result = cb(celcius);
-  console.log(result);
+const out = (celcius, convertFarenheit, convertKelvin, convertReamur) => {
+  //   let cb1 = convertFarenheit(celcius);
+  //   let cb2 = convertReamur(celcius);
+  //   let cb3 = convertKelvin(celcius);
+  //   const result = cb1 + cb2 + cb3;
+  //   console.log(result);
+  return console.log(
+    convertFarenheit(30) + "\n" + convertReamur(30) + "\n" + convertKelvin(30)
+  );
 };
+
 console.log("\n");
-out(30, convertFarenheit);
-out(30, convertReamur);
-out(30, convertKelvin);
+out(30, convertFarenheit, convertReamur, convertKelvin);
